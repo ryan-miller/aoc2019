@@ -12,3 +12,28 @@ func SumAll(masses []int) int {
 	}
 	return s
 }
+
+func RecursiveSum(mass int) int {
+
+	totalFuel := 0
+
+	for mass > 0 {
+
+		mass = Sum(mass)
+		if mass > 0 {
+			totalFuel += mass
+		}
+	}
+
+	return totalFuel
+}
+
+func RecursiveSumAll(masses []int) int {
+	totalFuel := 0
+	for i := 0; i < len(masses); i++ {
+		totalFuel += RecursiveSum(masses[i])
+	}
+	return totalFuel
+}
+
+//14
