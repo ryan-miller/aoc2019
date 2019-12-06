@@ -35,5 +35,3 @@ func RecursiveSumAll(masses []int) int {
 	}
 	return totalFuel
 }
-
-//14
